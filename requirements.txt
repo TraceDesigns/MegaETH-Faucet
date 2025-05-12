@@ -1,0 +1,7 @@
+requests
+web3
+twocaptcha-python
+colorama
+pytz
+tzlocal
+python-dotenv
